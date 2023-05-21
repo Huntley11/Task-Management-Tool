@@ -1,8 +1,10 @@
 import React from "react";
+import Navigation from "./Navigation";
 
 function About () {
     return(
     <section className="about">
+        <Navigation/>
         <div className="main">
             
              <img src="./group.jpg" alt="Group Members"/> {/* Needs to be fixed to show image */}
