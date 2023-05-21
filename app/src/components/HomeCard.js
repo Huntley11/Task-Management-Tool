@@ -1,19 +1,19 @@
 import React from "react";
 import './cssFiles/HomeCard.css'
 
-export default function HomeCard({ title, image, body }) {
-    
+function HomeCard({ card, onDelete }) {
+
     return (
         <div className="homeCard-container">
             <div className="homeCard-image ">
-                <img src={image} alt='' />
+                <img src={card.image} alt='' />
             </div>
             <div className="homeCard-content">
                 <div className="homeCard-title">
-                    {title}
+                    {card.title}
                 </div>
                 <div className="homeCard-body">
-                    <p>{body}</p>
+                    <p>{card.body}</p>
                 </div>
                 <div className="viewProject-btn">
                     <button>
@@ -24,7 +24,7 @@ export default function HomeCard({ title, image, body }) {
                             Edit Project
                     </button>
                     <br/>
-                    <button>
+                    <button onClick={() => onDelete(card.id)}>
                             Delete Project
                     </button>
                 </div>
@@ -32,3 +32,5 @@ export default function HomeCard({ title, image, body }) {
         </div>
     )
 }
+
+export default HomeCard

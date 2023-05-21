@@ -4,7 +4,7 @@ import Popup from "./popup";
 import HomeCard from "./HomeCard";
 import { useState } from "react";
 
-export default function Home() {
+function Home() {
     const [buttonPopup, setButtonPopup] = useState(false)
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
@@ -29,7 +29,14 @@ export default function Home() {
         setImage('');
         setBody('');
       };
-      
+
+      const handleDelete = (id) => {
+        // Remove the card with the given id from the cards array
+        const updatedCards = cards.filter((card) => card.id !== id);
+        setCards(updatedCards);
+      };
+    
+
     return (
         <>
         <div className="cards-Container">
@@ -74,7 +81,7 @@ export default function Home() {
                     {/* Render the generated cards */}
                     {cards.map((card, index) => (
                     <div key={index}>
-                    <HomeCard title={card.title} image={card.image} body={card.body}/>
+                    <HomeCard key={card.id} card={card} onDelete={handleDelete}/>
                 </div>
                 ))}
             </div>
@@ -82,3 +89,6 @@ export default function Home() {
         </>
     )
 }
+
+export default Home
+
