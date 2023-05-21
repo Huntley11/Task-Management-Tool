@@ -9,10 +9,24 @@ export default function NewCard () {
         <div className="newCard-container">
             <h1>Create New Project</h1>
             <br></br>
-            <button onClick={() => setButtonPopup(true)}>+</button>
+            <button className="createNewProjectButton" onClick={() => setButtonPopup(true)}>+</button>
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                <h3>My popup</h3>
-                <p>This is my button triggered popup</p>
+                <form>
+                    <h3>Create Project</h3>
+                    <label>Project Name</label>
+                    <br/>
+                    <input type="text"/>
+                    <br/>
+                    <label>Image Url</label>
+                    <br/>
+                    <input type="url" />
+                    <br/>
+                    <label>About this project</label>
+                    <br/>
+                    <input />
+                    <br/>
+                    <input type="submit"/>
+                </form>
             </Popup>
         </div>
     )

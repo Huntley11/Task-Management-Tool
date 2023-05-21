@@ -8,3 +8,8 @@
     transition: 0.3s;
     animation: ease-in;
 }
+
+.createNewProjectButton {
+    display: flex;
+    justify-content: center;
+}
