@@ -7,9 +7,10 @@
     border-radius: 25px;
     transition: 0.3s;
     animation: ease-in;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.createNewProjectButton {
-    display: flex;
-    justify-content: center;
-}
