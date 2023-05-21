@@ -28,6 +28,9 @@ function Home() {
         setTitle('');
         setImage('');
         setBody('');
+
+        //Close Popup
+        setButtonPopup(false);
       };
 
       const handleDelete = (id) => {
