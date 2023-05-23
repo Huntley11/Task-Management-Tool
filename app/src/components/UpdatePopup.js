@@ -1,20 +1,20 @@
 import React from 'react'
 import './cssFiles/Popup.css'
 
-function popup (props) {
-    return (props.trigger) ? (
+function UpdatePopup (updateProps) {
+    return (updateProps.updateTrigger) ? (
         <div className='popup'>
             <div className='popup-inner'>
                 <button 
                     className='close-btn' 
-                    onClick={() => props.setTrigger(false)}
+                    onClick={() => updateProps.setUpdateTrigger(false)}
                 >
                     Close
                 </button>
-                { props.children }
+                { updateProps.children }
             </div>
         </div>
     ) : "";
 }
 
-export default popup
+export default UpdatePopup

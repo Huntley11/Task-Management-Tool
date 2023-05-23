@@ -29,7 +29,7 @@ function Home() {
         setImage('');
         setBody('');
 
-        //Close Popup
+        //Close Popup on submit
         setButtonPopup(false);
       };
 
