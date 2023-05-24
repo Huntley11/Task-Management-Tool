@@ -1,56 +1,62 @@
-import React from "react";
-import './cssFiles/HomeCard.css'
+import React, { useState, useEffect } from "react";
+import './cssFiles/HomeCard.css';
 import UpdatePopup from "./UpdatePopup";
-import { useState, Fragment } from "react";
 
-function HomeCard({ card, onDelete }) {
+function HomeCard({ card, onUpdate, onDelete }) {
     const [updateButtonPopup, setUpdateButtonPopup] = useState(false);
-    const [updateTitle, setUpdateTitle] = useState('');
-    const [updateBody, setUpdateBody] = useState('');
-    const [updateImage, setUpdateImage] = useState('');
+    const [updateTitle, setUpdateTitle] = useState(card.title);
+    const [updateBody, setUpdateBody] = useState(card.body);
+    const [updateImage, setUpdateImage] = useState(card.image);
 
     const handleUpdate = (e) => {
         e.preventDefault();
-    
-        // Clear the input field
-        setUpdateTitle('');
-        setUpdateImage('');
-        setUpdateBody('');
 
+        const updatedCard = {
+            id: card.id,
+            title: updateTitle,
+            body: updateBody,
+            image: updateImage
+        };
 
-        //Close Popup on update
+        // Handle the update logic within the component
+        onUpdate(updatedCard);
+        
+        // Close the popup on update
         setUpdateButtonPopup(false);
-      };
+    };
+
+    useEffect(() => {
+        setUpdateTitle(card.title);
+        setUpdateBody(card.body);
+        setUpdateImage(card.image);
+    }, [card]);
 
     return (
-        <Fragment>
+        <>
             <div className="homeCard-container">
-            <div className="homeCard-image ">
-                <img src={card.image} alt='' />
-            </div>
-            <div className="homeCard-content">
-                <div className="homeCard-title">
-                    {card.title}
+                <div className="homeCard-image">
+                    <img src={card.image} alt="" />
                 </div>
-                <div className="homeCard-body">
-                    <p>{card.body}</p>
-                </div>
-                <div className="viewProject-btn">
-                    <button>
-                        View Project
-                    </button>
-                    <br />
-                    <button onClick={() => setUpdateButtonPopup(true)}>
-                        Edit Project
-                    </button>
-                    <br />
-                    <button onClick={() => onDelete(card.id)}>
-                        Delete Project
-                    </button>
+                <div className="homeCard-content">
+                    <div className="homeCard-title">{card.title}</div>
+                    <div className="homeCard-body">
+                        <p>{card.body}</p>
+                    </div>
+                    <div className="viewProject-btn">
+                        <button>View Project</button>
+                        <br />
+                        <button onClick={() => setUpdateButtonPopup(true)}>
+                            Edit Project
+                        </button>
+                        <br />
+                        <button onClick={() => onDelete(card.id)}>Delete Project</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <UpdatePopup updateTrigger={updateButtonPopup} setUpdateTrigger={setUpdateButtonPopup}>
+            <UpdatePopup
+                updateTrigger={updateButtonPopup}
+                setUpdateTrigger={setUpdateButtonPopup}
+            >
                 <form onSubmit={handleUpdate}>
                     <h3>Update Project</h3>
                     <label>Project Name</label>
@@ -81,9 +87,8 @@ function HomeCard({ card, onDelete }) {
                     <input type="submit" value="Update" />
                 </form>
             </UpdatePopup>
-        </Fragment>
-        
-    )
+        </>
+    );
 }
 
-export default HomeCard
+export default HomeCard;
