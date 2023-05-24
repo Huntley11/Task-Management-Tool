@@ -19,13 +19,13 @@ function TaskCard({ id, header, content, updateTask, deleteTaskCard }) {
       <input
         type="text"
         className="task-header"
-        placeholder="Enter task "
+        placeholder="Enter task header"
         value={header}
         onChange={handleHeaderChange}
       />
       <textarea
         className="task-content"
-        placeholder="Enter your notes here"
+        placeholder="Enter your task here"
         value={content}
         onChange={handleContentChange}
       />
