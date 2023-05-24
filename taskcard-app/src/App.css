@@ -24,13 +24,13 @@ h1 {
   background-color: aqua;
 }
 
-.notecard-container {
+.taskcard-container {
   margin-top: 20px;
   margin-left: 20px;
   width: 25em;  
 }
 
-.notecard {
+.taskcard {
   border: solid 0.1px;
   border-radius: 5px;
   padding: 10px 20px 20px;
@@ -40,11 +40,11 @@ h1 {
   background-color: white;
 }
 
-.notecard:hover {
+.taskcard:hover {
   transform: scale(1.01);
 }
 
-.note-header {
+.task-header {
   outline: none;
   width: 100%;
   height: 25px;
@@ -54,7 +54,7 @@ h1 {
   
 }
 
-.note-content {
+.task-content {
   outline: none;
   width: 100%;
   height: 100px;
@@ -62,7 +62,7 @@ h1 {
   resize: none;
 }
 
-.notecard:hover .delete-button {
+.taskcard:hover .delete-button {
   visibility: visible;
 }
 
