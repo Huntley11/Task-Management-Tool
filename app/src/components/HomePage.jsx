@@ -18,7 +18,7 @@ function HomePage() {
             </Nav>
             <h6>Team: Killer Bass</h6>
             <h1>Just Do It App</h1>
-            <h3>Struggling with keeping family members accoutable?</h3>
+            <h3>Struggling with keeping family members accountable?</h3>
             <img src="./lazy-woman-mess-around-home.jpg" alt="lazy woman-mess around home"/>
             <br />
             <h3>Now you can keep family members on track and on board with Just Do It.</h3>
