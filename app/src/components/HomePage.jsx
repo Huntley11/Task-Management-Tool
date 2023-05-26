@@ -34,6 +34,7 @@ function HomePage() {
                     <Link to='/home'>Template</Link>
                 </Button>
             </div>
+            <br/>
             <Footer />
         </div>
     )

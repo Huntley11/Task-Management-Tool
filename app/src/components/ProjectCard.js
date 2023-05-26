@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './cssFiles/ProjectCard.css';
 import UpdatePopup from "./UpdatePopup";
+import Button from 'react-bootstrap/Button';
 
 function Card({ card, onUpdate, onDelete }) {
     const [updateButtonPopup, setUpdateButtonPopup] = useState(false);
@@ -42,17 +43,20 @@ function Card({ card, onUpdate, onDelete }) {
                     <div className="homeCard-body">
                         <p>{card.body}</p>
                     </div>
-                    <div className="viewProject-btn">
-                        <button>View Project</button>
+                    <div className="project-btns">
+                        <Button>View Project</Button>
                         <br />
-                        <button onClick={() => setUpdateButtonPopup(true)}>
+                        <Button onClick={() => setUpdateButtonPopup(true)}>
                             Edit Project
-                        </button>
+                        </Button>
                         <br />
-                        <button onClick={() => onDelete(card.id)}>Delete Project</button>
+                        <Button onClick={() => onDelete(card.id)}>Delete Project</Button>
                     </div>
                 </div>
             </div>
+            <br/>
+            <br/>
+            <br/>
             <UpdatePopup
                 updateTrigger={updateButtonPopup}
                 setUpdateTrigger={setUpdateButtonPopup}

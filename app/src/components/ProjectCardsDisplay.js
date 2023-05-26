@@ -3,6 +3,7 @@ import './cssFiles/Home.css';
 import Popup from "./popup";
 import ProjectCard from "./ProjectCard";
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 function Home() {
     const [buttonPopup, setButtonPopup] = useState(false);
@@ -69,12 +70,12 @@ function Home() {
                 <div className="newCard-container">
                     <h1>Create New Project</h1>
                     <br></br>
-                    <button
+                    <Button
                         className="createNewProjectButton"
                         onClick={() => setButtonPopup(true)}
                     >
                         +
-                    </button>
+                    </Button>
                     <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
                         <form onSubmit={handleSubmit}>
                             <h3>Create Project</h3>
