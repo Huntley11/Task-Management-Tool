@@ -1,11 +1,9 @@
 import React from "react";
-
 import Nav from 'react-bootstrap/Nav';
 import Button from "react-bootstrap/Button";
-
 import { Link } from "react-router-dom";
-
 import Footer from "./Footer";
+import './cssFiles/Home.css';
 
 function HomePage() {
     return (
@@ -20,7 +18,14 @@ function HomePage() {
             </Nav>
             <h6>Team: Killer Bass</h6>
             <h1>Just Do It App</h1>
-            <h3>Struggling with keeping family members accoutable?<br /> Keep family members on track and on board. <br /> No misunderstandings and passing the blame.</h3>
+            <h3>Struggling with keeping family members accoutable?</h3>
+            <img src="./lazy-woman-mess-around-home.jpg" alt="lazy woman-mess around home"/>
+            <br />
+            <h3>Now you can keep family members on track and on board with Just Do It.</h3>
+            <img src="./family-running-track-composition-vector.jpg" alt="family running on track"/>
+            <br />
+            <h3>No more misunderstandings and passing the blame.</h3>
+            <img src="./family-blaming-eachother.jpg" alt="two people blaming eachother for a broken potted plant"/>
             <div>
                 <Button className="buttons" variant="success" size="lg">
                     <Link class="whtColor" to='/get_started'>Getting Started</Link>
