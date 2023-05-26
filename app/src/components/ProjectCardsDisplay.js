@@ -104,12 +104,12 @@ function Home() {
                                 onChange={(e) => setBody(e.target.value)}
                             ></textarea>
                             <br />
-                            <input type="submit" value="Create" />
+                            <Button type="submit" value="Create">Create</Button>
                         </form>
                     </Popup>
                 </div>
                 <div>
-                    {cards.map((card, index) => (
+                    {cards.map((card) => (
                         <div key={card.id}>
                             <ProjectCard
                                 card={card}

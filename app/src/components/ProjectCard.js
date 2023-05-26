@@ -88,7 +88,7 @@ function Card({ card, onUpdate, onDelete }) {
                         onChange={(e) => setUpdateBody(e.target.value)}
                     ></textarea>
                     <br />
-                    <input type="submit" value="Update" />
+                    <Button type="submit" value="Update">Update</Button>
                 </form>
             </UpdatePopup>
         </>

@@ -24,7 +24,7 @@ function HomePage() {
             <h3>Now you can keep family members on track and on board with Just Do It.</h3>
             <img src="./family-running-track-composition-vector.jpg" alt="family running on track"/>
             <br />
-            <h3>No more misunderstandings and passing the blame.</h3>
+            <h3>No more misunderstandings and passing on the blame.</h3>
             <img src="./family-blaming-eachother.jpg" alt="two people blaming eachother for a broken potted plant"/>
             <div>
                 <Button className="buttons" variant="success" size="lg">

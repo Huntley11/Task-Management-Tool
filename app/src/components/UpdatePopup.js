@@ -1,16 +1,17 @@
 import React from 'react'
 import './cssFiles/Popup.css'
+import Button from "react-bootstrap/Button";
 
 function UpdatePopup (updateProps) {
     return (updateProps.updateTrigger) ? (
         <div className='popup'>
             <div className='popup-inner'>
-                <button 
+                <Button 
                     className='close-btn' 
                     onClick={() => updateProps.setUpdateTrigger(false)}
                 >
                     Close
-                </button>
+                </Button>
                 { updateProps.children }
             </div>
         </div>
