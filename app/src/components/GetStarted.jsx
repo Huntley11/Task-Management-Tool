@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "./Navigation";
 import Carousel from "react-bootstrap/Carousel";
-import Footer from "./Footer";
+
 
 function GetStarted() {
     return (
