@@ -20,7 +20,7 @@ function HomePage() {
             </Nav>
             <h6>Team: Killer Bass</h6>
             <h1>Just Do It App</h1>
-            <h3>Struggling with keeping family members accoutable.<br /> Keep family members on track and on board. <br /> No misunderstandings and passing the blame.</h3>
+            <h3>Struggling with keeping family members accoutable?<br /> Keep family members on track and on board. <br /> No misunderstandings and passing the blame.</h3>
             <div>
                 <Button className="buttons" variant="success" size="lg">
                     <Link class="whtColor" to='/get_started'>Getting Started</Link>
