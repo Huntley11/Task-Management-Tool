@@ -1,0 +1,16 @@
+.newCard-container {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    margin: 10px;
+    border-radius: 25px;
+    transition: 0.3s;
+    animation: ease-in;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+

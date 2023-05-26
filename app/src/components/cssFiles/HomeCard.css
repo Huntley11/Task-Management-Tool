@@ -1,0 +1,39 @@
+.homeCard-container {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    margin: 10px;
+    border-radius: 25px;
+    transition: 0.3s;
+    animation: ease-in;
+}
+
+.homeCard-container:hover {
+    transform: scale(1,1);
+    box-shadow: 0px 0px 15px 0px;
+}
+
+.homeCard-title {
+ text-align: center;
+}
+
+.homeCard-image {
+    overflow: hidden;
+    height: 200px;
+}
+
+.homeCard-image img{
+    width: 300px;
+    height: 200px;
+}
+
+.homeCard-body {
+    overflow: auto;
+    margin: 5px;
+}
+
+.homeCard-content {
+    margin: 1rem;
+    margin-top: 0.5rem;
+}
