@@ -68,14 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-Task Management Tool
--If you are a daily todo person, you can create this app for others to manage their daily tasks.
-
-In this application, Users can
-+Login/Register to the application
-+Add daily tasks for themselves
-+Assign a due date of completion
-+Mark them as complete/incomplete
-+View weekly/Monthly statistics of their todos.
