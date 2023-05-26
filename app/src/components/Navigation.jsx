@@ -29,16 +29,5 @@ function Navigation() {
     )
     
 }
-//     <div className="topnav">
-    //         <Link>
-    //             <img src="https://placehold.co/100x100" alt="Logo"/> {/* Logo image still needed */}
-    //         </Link>
-    //         <div className="directory">
-    //             <Link to="/get_started">Get Started</Link>
-    //             <Link to="/home">Home</Link>
-    //             <Link to="/about">About</Link>
-    //         </div>
-            
-    //     </div>
-    // )
+
 export default Navigation
