@@ -1,7 +1,7 @@
 import React from "react";
 import './cssFiles/Home.css';
 import Popup from "./popup";
-import HomeCard from "./HomeCard";
+import ProjectCard from "./ProjectCard";
 import { useState } from "react";
 
 function Home() {
@@ -110,7 +110,7 @@ function Home() {
                 <div>
                     {cards.map((card, index) => (
                         <div key={card.id}>
-                            <HomeCard
+                            <ProjectCard
                                 card={card}
                                 onUpdate={handleUpdate}
                                 onDelete={handleDelete}

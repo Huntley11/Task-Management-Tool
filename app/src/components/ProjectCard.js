@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import './cssFiles/HomeCard.css';
+import './cssFiles/ProjectCard.css';
 import UpdatePopup from "./UpdatePopup";
 
-function HomeCard({ card, onUpdate, onDelete }) {
+function Card({ card, onUpdate, onDelete }) {
     const [updateButtonPopup, setUpdateButtonPopup] = useState(false);
     const [updateTitle, setUpdateTitle] = useState(card.title);
     const [updateBody, setUpdateBody] = useState(card.body);
@@ -91,4 +91,4 @@ function HomeCard({ card, onUpdate, onDelete }) {
     );
 }
 
-export default HomeCard;
+export default Card;
