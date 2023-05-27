@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios'
 
-import './Weather.css'
+import './cssFiles/Weather.css'
 
 function Weather() {
     const key = `54c9698cb1a54db39a323634232705`

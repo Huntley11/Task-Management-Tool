@@ -1,0 +1,36 @@
+.newCard-container {
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    margin: 10px;
+    border-radius: 25px;
+    transition: 0.3s;
+    animation: ease-in;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+img {
+    max-height: 600px;
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+h1 {
+    display: flex;
+    min-width: 95%;
+    justify-content: space-around;
+
+}
+
+.cards-Container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

@@ -1,0 +1,49 @@
+.homeCard-container {
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    margin: 10px;
+    border-radius: 25px;
+    transition: 0.3s;
+    animation: ease-in;
+}
+
+.homeCard-container:hover {
+    transform: scale(1,1);
+    box-shadow: 0px 0px 15px 0px;
+}
+
+.homeCard-title {
+ text-align: center;
+ font-size: 16pt;
+ font: bold;
+}
+
+.homeCard-image {
+    overflow: hidden;
+    height: 250px;
+}
+
+.homeCard-image img{
+    width: 400px;
+    height: 250px;
+}
+
+.homeCard-body {
+    overflow: auto;
+    margin: 5px;
+    font-size: 14pt;
+    max-height: 150px;
+}
+
+.homeCard-content {
+    margin: 1rem;
+    margin-top: 0.5rem;
+}
+
+.project-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
