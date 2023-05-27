@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
-import Weather from "./cssFiles/Weather";
+import Weather from "./Weather";
 import ProjectCardsDisplay from "./ProjectCardsDisplay"
 
 function NormalTemplate () {
