@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.weather-api {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(0,0,0,.4);
+    color: #fff;
+}
+
+
+.weather-api > p {
+    font-size: 1.6rem;
+}
+
+.temp > h3 {
+    font-size: 4rem;
+}
+
+.weather-container {
+    height: 700px;
+    margin: auto;
+    padding: 0 1rem;
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+} 
+
+.weather-container> .top {
+    margin: 1rem auto;
+}
+
+.weather-container .description {
+    position: relative;
+    right: -90%;
+    transform-origin: 0 0 ;
+    
+}
+
+.weather-api  .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgba(255,255,255,.4);
+}
+
+.bold {
+    font-weight: 700;
+}
+.weather-api .search {
+    
+    text-align: center;
+    padding: 1rem;
+}
+.weather-api input {
+    padding: .7rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255, .8);
+    background: rgba(255,255,255, .1);
+}
+
+::placeholder {
+    color: #f8f8f8;
+    
+}
