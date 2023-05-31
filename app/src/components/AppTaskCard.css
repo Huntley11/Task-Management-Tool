@@ -13,7 +13,7 @@
     flex-grow: 1;
     justify-content: flex-start;
     overflow-y: auto;
-    background-image: url('../image/beachday.jpg');
+    background-image: url('/public/image/beachday.jpg');
     background-size: cover;
   }
 

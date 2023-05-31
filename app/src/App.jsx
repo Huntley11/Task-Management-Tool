@@ -7,6 +7,7 @@ import About from './components/About';
 import NormalTemplate from './components/NormalTemplate';
 import ErrorPage from './components/ErrorPage';
 import LogIn from './components/LogIn';
+import AppTaskCard from './components/AppTaskCard';
 
 
 //Style
@@ -25,6 +26,7 @@ function App() {
         <Route path="/get_started" element={<GetStarted/>} />  { /* shows what the app can do */ }
         <Route path="/home" element={<NormalTemplate/>} /> { /* Normal website with features to be built in*/ }
         <Route path="*" element={ <ErrorPage/> } /> { /* The Error page when user types unknown parameters */ }
+        <Route path="/AppTaskCard.js" element={<AppTaskCard/>} /> { /* Task Manager*/ }
       </Routes>
     </Router>
   );

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import './AppTaskCard.css';
+import Navigation from './Navigation';
 
 function TaskCard({ id, header, content, updateTask, deleteTaskCard, moveToProgress, moveToCompleted, isCompleted }) {
   const handleHeaderChange = (e) => {
@@ -61,7 +62,7 @@ function TaskCard({ id, header, content, updateTask, deleteTaskCard, moveToProgr
 
 
 
-function App() {
+function AppTaskCard() {
   const [input, setInput] = useState('');
   const [tasks, setTasks] = useState([]);
   const [progressList, setProgressList] = useState([]);
@@ -139,6 +140,8 @@ function App() {
   };
 
   return (
+    <Fragment>
+    <Navigation/>
     <div className="App">
       <div className="lists-container">
         <div className='addtask'>
@@ -202,9 +205,10 @@ function App() {
         </div>
       </div>
     </div>
+    </Fragment>
   );
 }
 
 
 
-export default App;
+export default AppTaskCard;

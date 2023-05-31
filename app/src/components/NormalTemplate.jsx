@@ -9,6 +9,9 @@ function NormalTemplate () {
         <div>
             <Navigation/>
             <ProjectCardsDisplay />
+            <br/>
+            <br/>
+            <br/>
             <Weather />
             <Footer/>
         </div>
