@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import './cssFiles/ProjectCard.css';
 import UpdatePopup from "./UpdatePopup";
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom'
 
 function Card({ card, onUpdate, onDelete }) {
     const [updateButtonPopup, setUpdateButtonPopup] = useState(false);
@@ -45,8 +44,8 @@ function Card({ card, onUpdate, onDelete }) {
                         <p>{card.body}</p>
                     </div>
                     <div className="project-btns">
-                        <Button>
-                            <Link to="/AppTaskCard.js">View Project</Link>
+                        <Button href="/AppTaskCard.js">
+                            View Project
                         </Button>
 
                         <br />
