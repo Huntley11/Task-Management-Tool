@@ -2,7 +2,7 @@ import React, { useState, Fragment } from 'react';
 import './AppTaskCard.css';
 import Navigation from './Navigation';
 
-function TaskCard({ id, header, content, updateTask, deleteTaskCard, moveToProgress, moveToCompleted, isCompleted }) {
+function TaskCard({ id, header, content, updateTask, deleteTaskCard, moveToTodo, moveToProgress, moveToCompleted, isCompleted }) {
   const handleHeaderChange = (e) => {
     updateTask(id, 'header', e.target.value);
   };
@@ -21,6 +21,9 @@ function TaskCard({ id, header, content, updateTask, deleteTaskCard, moveToProgr
 
   const handleMoveToCompleted = () => {
     moveToCompleted(id);
+  };
+  const handleMoveToTodo = () => {
+    moveToTodo(id)
   };
 
   return (
@@ -47,14 +50,22 @@ function TaskCard({ id, header, content, updateTask, deleteTaskCard, moveToProgr
           Delete
         </button>
       )}
-      <button className="progress-button" onClick={handleMoveToProgress}>
+      {moveToProgress && (
+       <button className="progress-button" onClick={handleMoveToProgress}>
         Move to Progress
-      </button>
+      </button> 
+      )}
+      
       {moveToCompleted && (
         <button className="completed-button" onClick={handleMoveToCompleted}>
           Move to Completed
         </button>
+        
       )}
+{moveToTodo && (
+          <button className='move-todo' onClick={handleMoveToTodo}>Move ToDo</button>
+        )}
+
     </div>
   );
 }
@@ -106,14 +117,14 @@ function AppTaskCard() {
     }
   };
 
-  /*const handleMoveToTodo = (id) => {
+  const handleMoveToTodo = (id) => {
     const taskCard = progressList.find((taskCard) => taskCard.id === id);
     if (taskCard) {
       setTasks((prev) => [...prev, taskCard]);
       setProgressList((prev) => prev.filter((taskCard) => taskCard.id !== id));
     }
   };
-*/
+
   const handleMoveToCompleted = (id) => {
     const taskCard = progressList.find((taskCard) => taskCard.id === id);
     if (taskCard) {
@@ -162,6 +173,7 @@ function AppTaskCard() {
                 deleteTaskCard={deleteTaskCard}
                 moveToProgress={handleMoveToProgress}
                 moveToCompleted={handleMoveToCompleted}
+                moveToTodo={handleMoveToTodo}
 
               />
             ))}
@@ -180,7 +192,7 @@ function AppTaskCard() {
                 deleteTaskCard={deleteTaskCard}
                 moveToProgress={handleMoveToProgress}
                 moveToCompleted={handleMoveToCompleted}
-
+                moveToTodo={handleMoveToTodo}
               />
             ))}
           </ul>
